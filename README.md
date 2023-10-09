@@ -1,2 +1,2 @@
-# erduotong_toolkit
-一些可能用得上的小玩意 
+# toolkit-for-erduotong
+一些小玩意
