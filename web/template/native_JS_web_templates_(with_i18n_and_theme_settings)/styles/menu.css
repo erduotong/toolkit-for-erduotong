@@ -1,0 +1,175 @@
+.ctrl_menu_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: none;
+    margin-right: 1.5vw;
+    margin-left: auto;
+    margin-top: 1.5vh;
+    transition: 0.5s;
+}
+
+
+.ctrl_menu_img {
+    width: 2.7vw;
+    height: auto;
+    filter: drop-shadow(1000vw 0 var(--icon-color));
+    transform: translateX(-1000vw)
+}
+
+
+#menu_sidebar {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0.2vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: 0.6s;
+    height: 100vh;
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
+    box-shadow: 0 0 25px rgba(var(--shadow-color_rgb), 0.5);
+    background-color: rgba(var(--bg-color_rgb), 0.8);
+}
+
+
+.open_menu_area {
+    transition: 0.5s;
+
+}
+
+/*====================*/
+/*各种通用设置*/
+.menu_icons {
+    min-width: 20px;
+    min-height: 20px;
+    width: 2vw;
+    height: 2vh;
+    margin-right: 3px;
+    filter: drop-shadow(1000vw 0 var(--icon-color));
+    transform: translateX(-1000vw);
+}
+
+.menu_dropdown_open_buttons {
+    border-radius: 12px;
+    min-width: 135px;
+    width: 5vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5vh;
+    margin-left: 0.5vw;
+    background-color: unset;
+    color: var(--font-color);
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: none;
+}
+
+.menu_dropdown_open_buttons:hover {
+    background-color: var(--hover-background);
+}
+
+.menu_dropdown_open_buttons:focus {
+    outline: none;
+    border: 2px solid var(--focus-border);
+}
+
+.menu_dropdown_contents {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-color2);
+    min-width: 130px;
+    box-shadow: 0 12px 20px 3px rgba(var(--shadow-color_rgb), 0.3);
+    z-index: 1;
+    border-radius: 12px;
+    outline: none;
+    color: var(--font-color);
+    text-align: center;
+    transition: 0.5s;
+    margin: 0.5vh 0.5vw;
+    padding: 2vh 1vw;
+}
+
+
+/*====================*/
+
+.change_theme_btn {
+    background-color: unset;
+    color: var(--font-color);
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 悬停 &获取焦点时的下拉按钮 */
+.change_theme_btn:hover {
+    background-color: var(--hover-background);
+}
+
+/* 容器 <div> - 需要定位下拉内容 */
+.theme_change_dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* 下拉列表中的button */
+.theme_change-dropdown_content button {
+    color: var(--font-color);
+    background-color: var(--bg-color2);
+    padding-top: 1vh;
+    border-radius: 6px;
+    width: 10vw;
+    min-width: 135px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* 显示下拉菜单（当用户点击下拉按钮时，使用 JS 将此类添加到 .theme_change-dropdown_content 容器中）*/
+.theme_change-dropdown_content.show {
+    display: block;
+}
+
+
+/*language*/
+
+#language_set_dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.language_change_buttons:hover {
+    background-color: var(--hover-background);
+}
+
+.language_change_buttons {
+    color: var(--font-color);
+    font-size: 16px;
+    border: none;
+    width: 10vw;
+    cursor: pointer;
+    background-color: var(--bg-color2);
+    padding: 1vh 16px 16px;
+    border-radius: 6px;
+    min-width: 140px;
+    text-decoration: none;
+    display: block;
+}
+
+#language_change_dropdown {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+#language_change_dropdown.show {
+    display: block;
+}
