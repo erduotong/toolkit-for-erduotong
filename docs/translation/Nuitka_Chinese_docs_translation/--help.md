@@ -10,17 +10,22 @@
 
 ````markdown
 #### --help
+
 原始参数名: `--help`    
 中文参数名: `帮助`   
-英文简介: 
+英文简介:
+
 ```
 show this help message and exit
 ```
-中文简介: 
+
+中文简介:
+
 ```
 显示此帮助消息并退出
 ```    
 ````
+
 </details>
 
 
@@ -29,3 +34,18 @@ show this help message and exit
 
 </details>
 
+#### --help
+
+原始参数名: `--help`    
+中文参数名: `帮助`   
+英文简介:
+
+```
+show this help message and exit
+```
+
+中文简介:
+
+```
+显示此帮助消息并退出
+```    
