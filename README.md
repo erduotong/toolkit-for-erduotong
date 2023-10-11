@@ -21,6 +21,15 @@
 
 </details>
 
+### 文档相关
+
+<details>
+<summary>翻译</summary>
+
+* [Nuitka中文文档翻译](./docs/translation/Nuitka_Chinese_docs_translation/README.md)
+
+</details>
+
 ## 分享协议
 
 如无特殊说明，本仓库内的所有内容均遵循[MIT](./LICENSE)协议
