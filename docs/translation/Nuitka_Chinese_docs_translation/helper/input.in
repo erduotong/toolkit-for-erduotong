@@ -1,4 +1,42 @@
-
+Options:
+  --help                show this help message and exit
+  --version             Show version information and important details for bug
+                        reports, then exit. Defaults to off.
+  --module              Create an extension module executable instead of a
+                        program. Defaults to off.
+  --standalone          Enable standalone mode for output. This allows you to
+                        transfer the created binary to other machines without
+                        it using an existing Python installation. This also
+                        means it will become big. It implies these option: "--
+                        follow-imports" and "--python-flag=no_site". Defaults
+                        to off.
+  --onefile             On top of standalone mode, enable onefile mode. This
+                        means not a folder, but a compressed executable is
+                        created and used. Defaults to off.
+  --python-debug        Use debug version or not. Default uses what you are
+                        using to run Nuitka, most likely a non-debug version.
+  --python-flag=FLAG    Python flags to use. Default is what you are using to
+                        run Nuitka, this enforces a specific mode. These are
+                        options that also exist to standard Python executable.
+                        Currently supported: "-S" (alias "no_site"),
+                        "static_hashes" (do not use hash randomization),
+                        "no_warnings" (do not give Python run time warnings),
+                        "-O" (alias "no_asserts"), "no_docstrings" (do not use
+                        doc strings), "-u" (alias "unbuffered"), "isolated"
+                        (do not load outside code) and "-m" (package mode,
+                        compile as "package.__main__"). Default empty.
+  --python-for-scons=PATH
+                        If using Python3.3 or Python3.4, provide the path of a
+                        Python binary to use for Scons. Otherwise Nuitka can
+                        use what you run Nuitka with or a Python installation
+                        from Windows registry. On Windows Python 3.5 or higher
+                        is needed. On non-Windows, Python 2.6 or 2.7 will do
+                        as well.
+  --main=PATH           If specified once, this takes the place of the
+                        positional argument, i.e. the filename to compile.
+                        When given multiple times, it enables "multidist" (see
+                        User Manual) it allows you to create binaries that
+                        depending on file name or invocation name.
 
   Control the inclusion of modules and packages in result:
     --include-package=PACKAGE
