@@ -64,7 +64,7 @@ while i < len(lines):
         Options[now_key][key] = Options[now_key][key].strip()
         continue
 
-max_line_len = 60
+max_line_len = 80
 # 生成markdown
 output_str = "# Options()\n"
 for key, value in Options.items():
