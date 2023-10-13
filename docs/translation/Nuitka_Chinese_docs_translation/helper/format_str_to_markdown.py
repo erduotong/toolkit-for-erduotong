@@ -4,7 +4,7 @@ with open('./input.in', 'r', encoding='utf-8') as f:
     input_str = f.read()
     input_str = input_str.strip()
 Options = {
-    "default": {
+    "basic": {
 
     }
 }
@@ -29,9 +29,9 @@ while i < len(lines):
         while i < len(lines) and '--' not in lines[i][:10] and lines[i] != '':
             value += f" {lines[i].strip()}"
             i += 1
-        Options["default"][key] = value
+        Options["basic"][key] = value
         # 清除两端空格
-        Options["default"][key] = Options["default"][key].strip()
+        Options["basic"][key] = Options["basic"][key].strip()
         continue
 
     # 如果这一行是只有空格的行
