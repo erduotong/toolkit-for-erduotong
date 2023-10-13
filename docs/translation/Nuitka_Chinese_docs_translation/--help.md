@@ -842,12 +842,12 @@ compressed executable is created and used. Defaults to off.
 
 ```
 --python-debug
-```
+``` 
 
 中文参数名:
 
 ```
-
+Python调试
 ```
 
 原始简介:
@@ -860,7 +860,7 @@ likely a non-debug version.
 中文简介:
 
 ```
-
+使用调试版本或不使用。默认使用你用来运行Nuitka的(调试)版本, 大多数情况下是非调试版本。
 ```
 
 ---
@@ -876,7 +876,7 @@ likely a non-debug version.
 中文参数名:
 
 ```
-
+Python标志
 ```
 
 原始简介:
@@ -894,7 +894,12 @@ compile as "package.__main__"). Default empty.
 中文简介:
 
 ```
-
+要使用的Python标志.默认是你用来运行Nuitka的内容, 这强制使用特定模式.这些也是标准Python可执行文件中存在的选项.
+目前支持的有: "-S" (别名 "no_site")(不应该包含python的site-packages目录,也就是不包含任何python环境的第三方库),
+"static_hashes" (不使用哈希随机化), "no_warnings" (不给出Python运行时的警告),
+"-O" (别名 "no_asserts")(不包含任何调试/错误检查(assert)语句), "no_docstrings" (不使用文档字符串),
+“-u”（别名 “unbuffered”）(不使用缓冲), "isolated" (不加载外部代码) 和 "-m" (包模式, 编译为 "package.__main__").
+默认为空。
 ```
 
 ---
@@ -910,7 +915,7 @@ compile as "package.__main__"). Default empty.
 中文参数名:
 
 ```
-
+Scons的Python路径=路径
 ```
 
 原始简介:
@@ -925,7 +930,9 @@ On non-Windows, Python 2.6 or 2.7 will do as well.
 中文简介:
 
 ```
-
+如果使用Python3.3或Python3.4, 提供一个Python二进制文件的路径给Scons使用.
+否则，Nuitka可以使用您运行Nuitka的内容(环境), 或者从Windows注册表中获取Python安装。
+在Windows上，需要Python 3.5或更高的版本。在非Windows系统上，Python 2.6或2.7也可以
 ```
 
 ---
@@ -941,7 +948,7 @@ On non-Windows, Python 2.6 or 2.7 will do as well.
 中文参数名:
 
 ```
-
+主程序=路径
 ```
 
 原始简介:
@@ -956,7 +963,21 @@ invocation name.
 中文简介:
 
 ```
+如果只指定一次(如--main="1.py")，这将取代位置参数，也就是要编译的文件名(入口)。 
+如果指定多次(如--main="1.py" --main="2.py"), 它将启用"multidist"(参见用户手册),它允许您创建依赖于文件名或调用名的二进制文件。
+(允许多个主程序使用同一套编译参数)
 
+Multidist补充:
+我们把主路径的基本名称和入口点称为entry point。这些名称当然必须是不同的。然后创建的二进制文件可以执行任何一个入口点，
+并会对sys.argv[0]如何显示做出反应。所以如果以正确的方式执行（通过像subprocess或OS API这样的东西你可以控制这个名字），
+或者通过重命名或复制二进制文件，或者链接到它，你就可以实现奇迹。
+这种模式适用于独立模式、onefile模式和纯加速模式。它不适用于模块模式。
+例子:
+|-1.py
+|-2.py
+nuitka  --main=./1.py --main=./2.py --standalone 1.py
+运行打包后的1.exe: 得到1.py的运行结果
+改名为2.exe: 得到2.py的运行结果
 ```
 
 ---
