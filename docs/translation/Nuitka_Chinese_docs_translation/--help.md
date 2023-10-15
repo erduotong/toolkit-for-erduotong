@@ -1580,7 +1580,7 @@ for debug purposes, or to save time. Default is off.
 中文参数名:
 
 ```
-
+包括包数据=包名
 ```
 
 原始简介:
@@ -1601,7 +1601,11 @@ empty.
 中文简介:
 
 ```
-
+包括给定包的数据文件。DLL和扩展模块不是数据文件，也不会像这样被包含。可以使用下面指示的文件名模式。
+默认情况下，不包括包的数据文件，但包配置可以执行此操作。这只会包括非DLL和非拓展模块，即实际存在的数据文件。
+在":"后面，还可以给出文件名模式，只选择匹配的文件。例子: "--include-package-data=package_name" (所有文件)
+--include-package-data=package_name=*.txt" (只有某种类型) "--include-package-data=package_name=some_filename.dat (具体文件)
+默认为空。
 ```
 
 ---
@@ -1617,7 +1621,7 @@ empty.
 中文参数名:
 
 ```
-
+包含数据文件=路径
 ```
 
 原始简介:
@@ -1635,6 +1639,11 @@ structure. Default empty.
 中文简介:
 
 ```
+通过分配的文件名包含数据文件。有很多允许的形式。
+使用–include-data-files=/path/to/file/.txt=folder_name/some.txt’，它将复制一个文件，如果是十多个文件，将会报错。
+使用’–include-data-files=/path/to/files/.txt=folder_name/‘将把所有匹配的文件放入该文件夹。
+对于递归复制，有一种带有三个值的形式:’–include-data-files=/path/to/scan=folder_name=**/*.txt’，这将保留目录的文件结构。
+默认为空。
 
 ```
 
@@ -1651,7 +1660,7 @@ structure. Default empty.
 中文参数名:
 
 ```
-
+包含数据目录=目录
 ```
 
 原始简介:
@@ -1669,7 +1678,11 @@ empty.
 中文简介:
 
 ```
-
+将整个目录的数据文件包含在分发中。这是递归的。
+如果你想要非递归包含，请查看'--include-data-files'与模式。
+’–include-data-dir=/path/some_dir=data/some_dir’，用于整个目录的普通复制。
+所有文件都会被复制，如果你想排除文件，你需要事先删除它们，或者使用’–noinclude-data-files’选项来删除它们。
+默认为空。
 ```
 
 ---
@@ -1685,7 +1698,7 @@ empty.
 中文参数名:
 
 ```
-
+不包含数据文件=形式
 ```
 
 原始简介:
@@ -1700,7 +1713,9 @@ whole directory simply use "package_name". Default empty.
 中文简介:
 
 ```
-
+不包含与给定文件名形式匹配的数据文件。这是针对目标文件名而非源路径的。
+因此，要从'package_name'的包数据中忽略一个文件模式，应该匹配为"package_name/*.txt",
+或者啥对整个目录而简单地使用"package_name"。默认为空
 ```
 
 ---
@@ -1716,7 +1731,7 @@ whole directory simply use "package_name". Default empty.
 中文参数名:
 
 ```
-
+列出包数据
 ```
 
 原始简介:
@@ -1728,7 +1743,7 @@ Output the data files found for a given package name. Default not done.
 中文简介:
 
 ```
-
+输出给定包名称找到的数据文件。默认不执行
 ```
 
 ---
