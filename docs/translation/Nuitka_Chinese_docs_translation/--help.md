@@ -681,6 +681,7 @@ Options:
 <summary>目录</summary>
 
 目录最后更新: 2023/10/14
+
 * [Nuitka --help文档翻译](#nuitka---help文档翻译)
     * [信息](#信息)
 * [Options(选项)](#options选项)
@@ -1131,7 +1132,7 @@ Multidist补充:
 例子:
 |-1.py
 |-2.py
-nuitka  --main=./1.py --main=./2.py --standalone 1.py
+nuitka --main=./1.py --main=./2.py --standalone 1.py
 运行打包后的1.exe: 得到1.py的运行结果
 改名为2.exe: 得到2.py的运行结果
 ```
@@ -1155,7 +1156,7 @@ nuitka  --main=./1.py --main=./2.py --standalone 1.py
 中文参数名:
 
 ```
-
+包含包=包
 ```
 
 原始简介:
@@ -1172,7 +1173,11 @@ Default empty.
 中文简介:
 
 ```
-
+包含整个包。以Python命名空间的形式给出，例如’some_package.sub_package’，
+然后Nuitka会找到它并包含它以及在其创建的二进制或扩展模块的磁盘位置下面找到的所有模块，并使其可以被代码导入。
+为了避免不需要的子包，例如测试，你可以这样做’–nofollow-import-to=*.tests’。默认为空。
+(注: 这里的包含是指将包含的包或模块编译到二进制文件中并可以被代码导入, 而不是将其作为依赖项)
+(示例:nuitka --include-package=numpy --include-package=pandas main.py)
 ```
 
 ---
@@ -1188,7 +1193,7 @@ Default empty.
 中文参数名:
 
 ```
-
+包含模块=模块
 ```
 
 原始简介:
@@ -1203,7 +1208,8 @@ code. Default empty.
 中文简介:
 
 ```
-
+包含单个模块。以Python命名控件的形式给出，例如'some_package.some_module'，然后Nuitka会找到它并将其包含在其创建的二进制文件或扩展模块中，
+并使其可以被代码导入。默认为空
 ```
 
 ---
@@ -2616,7 +2622,7 @@ experimented feature.
 中文参数名:
 
 ```
-
+低内存模式
 ```
 
 原始简介:
@@ -2630,7 +2636,7 @@ out of memory problems. Defaults to off.
 中文简介:
 
 ```
-
+尝试使用更少的内存，方法是减少C编译任务的分叉并使用更少内存的选项。用于嵌入式机器。在出现内存不足的问题时使用。默认为关闭。
 ```
 
 ---
