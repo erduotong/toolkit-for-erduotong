@@ -1225,7 +1225,7 @@ code. Default empty.
 中文参数名:
 
 ```
-
+包含插件目录=模块/包                                                                                                                                                                                                                    
 ```
 
 原始简介:
@@ -1241,7 +1241,9 @@ only. Can be given multiple times. Default empty.
 中文简介:
 
 ```
-
+同时包括该目录中找到的代码，将它们视为各自的主文件。这将覆盖其他包含(include)选项。
+你应该更倾向于使用其他包含选项。它们是通过名称而不是文件名来查找的，这些选项可以通过在'sys.path'中找到东西
+这个选项只适用于非常特殊的用例。可以多次给出。默认为空。
 ```
 
 ---
@@ -1257,7 +1259,7 @@ only. Can be given multiple times. Default empty.
 中文参数名:
 
 ```
-
+包含插件文件=模式
 ```
 
 原始简介:
@@ -1270,7 +1272,7 @@ Can be given multiple times. Default empty.
 中文简介:
 
 ```
-
+包含匹配PATTERN(模式)的文件。覆盖所有其他的跟随选项。可以多次给出。默认为空
 ```
 
 ---
@@ -1286,7 +1288,7 @@ Can be given multiple times. Default empty.
 中文参数名:
 
 ```
-
+首选源代码
 ```
 
 原始简介:
@@ -1302,7 +1304,8 @@ Default off.
 中文简介:
 
 ```
-
+对于已经编译的拓展模块，如果存在源代码和拓展模块，通常会使用拓展模块，但为了获得最佳的性能，最好从可用的源代码编译模块。
+如果不需要，可以使用--nop-perfer-source-code来禁用有关于此的警告。默认关闭。
 ```
 
 ---
