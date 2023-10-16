@@ -1765,7 +1765,7 @@ Output the data files found for a given package name. Default not done.
 中文参数名:
 
 ```
-
+包含元数据分发分发
 ```
 
 原始简介:
@@ -1781,7 +1781,8 @@ compilation. Default empty.
 中文简介:
 
 ```
-
+未给定的分发名称包含元数据信息。有些包会检查元数据的存在、版本、入口点灯，而如果没有给出这些选项，它只能在编译时被识别才会工作，这并不总是会发生。
+当然，这只对包含在编译中的包有意义。默认为空。
 ```
 
 ---
