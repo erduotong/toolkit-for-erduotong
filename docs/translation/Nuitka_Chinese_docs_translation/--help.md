@@ -1804,7 +1804,7 @@ compilation. Default empty.
 中文参数名:
 
 ```
-
+不包含动态链接库们=模式
 ```
 
 原始简介:
@@ -1819,7 +1819,9 @@ Default empty.
 中文简介:
 
 ```
-
+不要包括与给定文件名模式匹配的DLL文件。这是针对目标文件名，而不是源路径。
+因此，要忽略包含在“package_name”包中的DLL“someDLL”，应将其匹配为“package_name/someDLL.*”。
+默认为空。
 ```
 
 ---
@@ -1835,7 +1837,7 @@ Default empty.
 中文参数名:
 
 ```
-
+列出包动态链接库们=包名
 ```
 
 原始简介:
@@ -1847,7 +1849,7 @@ Output the DLLs found for a given package name. Default not done.
 中文简介:
 
 ```
-
+为给定的包名找到DLLs并输出。默认不执行。
 ```
 
 ---
