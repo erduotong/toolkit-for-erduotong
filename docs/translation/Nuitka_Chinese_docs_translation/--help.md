@@ -1871,7 +1871,7 @@ Output the DLLs found for a given package name. Default not done.
 中文参数名:
 
 ```
-
+警告隐式异常
 ```
 
 原始简介:
@@ -1883,7 +1883,7 @@ Enable warnings for implicit exceptions detected at compile time.
 中文简介:
 
 ```
-
+启用对在编译时检测到的隐式异常的警告。
 ```
 
 ---
@@ -1899,7 +1899,7 @@ Enable warnings for implicit exceptions detected at compile time.
 中文参数名:
 
 ```
-
+警告不寻常的代码
 ```
 
 原始简介:
@@ -1911,7 +1911,7 @@ Enable warnings for unusual code detected at compile time.
 中文简介:
 
 ```
-
+启用对在编译时对检测到的不寻常代码的警告。
 ```
 
 ---
@@ -1941,7 +1941,8 @@ e.g. "</dev/null" or "<NUL:". Default is to prompt.
 中文简介:
 
 ```
-
+在需要时允许Nuitka下载外部代码。例如依赖项walker,ccache,甚至Windows上的gcc。要禁用，请从nul设备重定向输入。
+例如"</dev/null"或"<NUL:"。默认下载时提示。
 ```
 
 ---
@@ -1957,7 +1958,7 @@ e.g. "</dev/null" or "<NUL:". Default is to prompt.
 中文参数名:
 
 ```
-
+不警告助记符=助记符
 ```
 
 原始简介:
@@ -1972,7 +1973,7 @@ multiple times and accepts shell pattern. Default empty.
 中文简介:
 
 ```
-
+禁用给定助记符的警告。这些是为了确保你知道某些主题，并且通常指向Nuitka网站。助记符是URL末尾的部分，没有HTML后缀。可以多次给出并接受shell模式。默认为空。
 ```
 
 ---
@@ -1994,7 +1995,7 @@ multiple times and accepts shell pattern. Default empty.
 中文参数名:
 
 ```
-
+运行
 ```
 
 原始简介:
@@ -2007,7 +2008,7 @@ Defaults to off.
 中文简介:
 
 ```
-
+立即执行创建的二进制文件(或导入已编译的模块)。默认关闭。
 ```
 
 ---
@@ -2023,7 +2024,7 @@ Defaults to off.
 中文参数名:
 
 ```
-
+调试器
 ```
 
 原始简介:
@@ -2036,7 +2037,7 @@ trace. Defaults to off.
 中文简介:
 
 ```
-
+在调试器中执行，例如“gdb”或“lldb”以自动获取堆栈跟踪。默认关闭。
 ```
 
 ---
@@ -2052,7 +2053,7 @@ trace. Defaults to off.
 中文参数名:
 
 ```
-
+使用pythonpath(python路径)执行
 ```
 
 原始简介:
@@ -2066,7 +2067,8 @@ ought to not need PYTHONPATH anymore, and definitely not for standalone mode.
 中文简介:
 
 ```
-
+当使用'--run'立刻执行创建的二进制文件或模块时，不要重置'PYTHONPATH'环境。当所有模块都成功包含时，您应该不再需要PYTHONPATH。
+对于独立模式(standalone)来说，绝对不需要PYTHONPATH。
 ```
 
 ---
