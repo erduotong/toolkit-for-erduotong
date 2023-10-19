@@ -2090,7 +2090,7 @@ ought to not need PYTHONPATH anymore, and definitely not for standalone mode.
 中文参数名:
 
 ```
-
+用户包配置文件=YAML文件名
 ```
 
 原始简介:
@@ -2105,7 +2105,7 @@ empty.
 中文简介:
 
 ```
-
+用户提供包含包配置的Yaml文件. 您可以包括DLL文件,删除冗余，添加隐藏的依赖项。查看用户手册以获取使用格式的完整描述。可以多次给出。默认为空。
 ```
 
 ---
