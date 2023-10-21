@@ -2121,7 +2121,7 @@ empty.
 中文参数名:
 
 ```
-
+完全兼容
 ```
 
 原始简介:
@@ -2136,7 +2136,8 @@ for tests only and should *not* be used.
 中文简介:
 
 ```
-
+确保和CPython绝对兼容。甚至不允许与CPython行为的轻微偏差，例如没有更好的跟踪回溯(trackback)或异常消息。
+这些行为并不是真正的不兼容，而只是不同或者更糟糕而已。这仅用于测试，不应该使用。
 ```
 
 ---
@@ -2152,7 +2153,8 @@ for tests only and should *not* be used.
 中文参数名:
 
 ```
-
+中文参数名:
+文件引用选择=模式
 ```
 
 原始简介:
@@ -2172,7 +2174,10 @@ is.
 中文简介:
 
 ```
-
+选择"__file__"的值。创建的二进制文件和模块"执行时"（即独立二进制文件和摸块模式的默认值)使用自己
+的位置来扣除"__file__"的值。包含的软件包假装在该位置下方的目录中。这样就可以在部署中包含数据文件。
+如果只是为了加速，最好使用"原始(original)"值，其中将使用源文件位置。也就是使用源文件的位置。使用"frozen"的时候，
+会使用"<frozen module_name>"符号。出于兼容性的原因，"__file__"值将始终具有".py"后缀，而与它的实际值无关。
 ```
 
 ---
@@ -2188,7 +2193,7 @@ is.
 中文参数名:
 
 ```
-
+模块名称选择=模式
 ```
 
 原始简介:
@@ -2204,7 +2209,9 @@ incompatible for modules that normally can be loaded into any package.
 中文简介:
 
 ```
-
+选择"__name__"和"__package__"的值。使用"执行时(runtime)"（模块模式的默认值）创建的模块使用软件包
+来推断"__package__"的值，以实现完全兼容。"原始(original)"值（其他模式的默认值）允许进行更多的静态优化，但对那些通常
+可以加载到任意软件包的模块来说是不兼容的。
 ```
 
 ---
@@ -2226,7 +2233,7 @@ incompatible for modules that normally can be loaded into any package.
 中文参数名:
 
 ```
-
+输出文件名=文件名
 ```
 
 原始简介:
@@ -2241,7 +2248,8 @@ include path information that needs to exist though. Defaults to
 中文简介:
 
 ```
-
+指定可执行文件的名称。拓展模块和独立模式没有这个选项，使用时会报错。这可能需要包含存在的路径信息。
+默认为该平台上的"<program_name>.exe"
 ```
 
 ---
@@ -2257,7 +2265,7 @@ include path information that needs to exist though. Defaults to
 中文参数名:
 
 ```
-
+输出目录=目录
 ```
 
 原始简介:
@@ -2271,7 +2279,7 @@ current directory.
 中文简介:
 
 ```
-
+指定存放中间文件和最终输出文件的位置。选定目录将存放构建文件夹，发行文件夹，二进制文件等。默认为当前目录。
 ```
 
 ---
@@ -2287,7 +2295,7 @@ current directory.
 中文参数名:
 
 ```
-
+删除构建文件夹
 ```
 
 原始简介:
@@ -2300,7 +2308,7 @@ off.
 中文简介:
 
 ```
-
+生成exe或者模块文件后删除构建文件夹。默认关闭。
 ```
 
 ---
@@ -2316,7 +2324,7 @@ off.
 中文参数名:
 
 ```
-
+不创建pyi文件
 ```
 
 原始简介:
@@ -2329,7 +2337,7 @@ used to detect implicit imports. Defaults to off.
 中文简介:
 
 ```
-
+不要为Nuitka创建拓展模块而创建".pyi"文件用于检测隐式导入。默认关闭。
 ```
 
 ---
@@ -2351,7 +2359,7 @@ used to detect implicit imports. Defaults to off.
 中文参数名:
 
 ```
-
+调试
 ```
 
 原始简介:
@@ -2364,7 +2372,8 @@ production. Defaults to off.
 中文简介:
 
 ```
-
+执行所有可能的自身检查以发现Nuitka中的错误，请不要用与生产中。
+默认关闭。
 ```
 
 ---
@@ -2380,7 +2389,7 @@ production. Defaults to off.
 中文参数名:
 
 ```
-
+不去除调试信息
 ```
 
 原始简介:
@@ -2393,7 +2402,7 @@ Defaults to off.
 中文简介:
 
 ```
-
+在生成的对象文件中保留调试信息，以便更好的和调试器交互。默认关闭。
 ```
 
 ---
@@ -2409,7 +2418,7 @@ Defaults to off.
 中文参数名:
 
 ```
-
+耗时分析
 ```
 
 原始简介:
@@ -2422,7 +2431,7 @@ off.
 中文简介:
 
 ```
-
+启用基于vmprof的耗时分析。目前无法使用。默认关闭。
 ```
 
 ---
@@ -2438,7 +2447,7 @@ off.
 中文参数名:
 
 ```
-
+内部图
 ```
 
 原始简介:
@@ -2451,7 +2460,7 @@ but only for small test cases. Defaults to off.
 中文简介:
 
 ```
-
+创建优化过程内部的图，不要用于整个程序，请只用于小的测试用例。默认关闭。
 ```
 
 ---
@@ -2467,7 +2476,7 @@ but only for small test cases. Defaults to off.
 中文参数名:
 
 ```
-
+跟踪执行
 ```
 
 原始简介:
@@ -2480,7 +2489,7 @@ to off.
 中文简介:
 
 ```
-
+跟踪执行并输出。在执行代码之前输出代码行。默认关闭。
 ```
 
 ---
@@ -2512,7 +2521,8 @@ source to determine which files it should look at.
 中文简介:
 
 ```
-
+这不是增量编译，仅用于 Nuitka 开发。将现有文件重新编译为C。允许编译编辑过的C文件，以便对生成源代码的修改进行快速调试。
+例如查看代码是否通过，值的输出等。默认关闭。它要查看的文件取决于编译Python源代码。 
 ```
 
 ---
@@ -2528,7 +2538,7 @@ source to determine which files it should look at.
 中文参数名:
 
 ```
-
+xml=xml文件名
 ```
 
 原始简介:
@@ -2541,7 +2551,7 @@ given filename.
 中文简介:
 
 ```
-
+将内部程序结构和优化结果以XML形式写入给定的文件名。
 ```
 
 ---
@@ -2557,7 +2567,7 @@ given filename.
 中文参数名:
 
 ```
-
+发布模式
 ```
 
 原始简介:
@@ -2572,7 +2582,8 @@ potentially. Default off.
 中文简介:
 
 ```
-
+禁用用于更方便发现兼容性问题的代码。例如，这将阻止使用"-c"参数执行，
+该参数通常被试图运行模块的代码所使用，并可能导致程序一次又一次地启动自己。默认关闭
 ```
 
 ---
@@ -2588,7 +2599,7 @@ potentially. Default off.
 中文参数名:
 
 ```
-
+禁用发布模式标识=标识
 ```
 
 原始简介:
@@ -2601,7 +2612,7 @@ deployment mode will output these identifiers. Default empty.
 中文简介:
 
 ```
-
+保持发布模式。但是选择性的禁用其中的某些功能。发布模式的错误将输出这些标识符。默认为空。
 ```
 
 ---
@@ -2617,7 +2628,7 @@ deployment mode will output these identifiers. Default empty.
 中文参数名:
 
 ```
-
+实验性=标识符
 ```
 
 原始简介:
@@ -2631,7 +2642,8 @@ experimented feature.
 中文简介:
 
 ```
-
+使用声明为"实验性"的功能。如果代码中没有实验性功能，则可能不会产生任何影响。
+使用每个实验功能的秘密标签(检查源代码)。
 ```
 
 ---
@@ -2677,20 +2689,20 @@ out of memory problems. Defaults to off.
 中文参数名:
 
 ```
-
+从报告中创建环境=报告
 ```
 
 原始简介:
 
 ```
 Create a new virtualenv in that non-existing path from the report file given
-with e.g. '--report=compilation- report.xml'. Default not done.
+with e.g. '--report=compilation-report.xml'. Default not done.
 ```
 
 中文简介:
 
 ```
-
+根据给出的报告文件在不存在的路径中创建一个新的虚拟环境，例如'--report=compilation-report.xml'。默认不执行。
 ```
 
 ---
@@ -2706,7 +2718,7 @@ with e.g. '--report=compilation- report.xml'. Default not done.
 中文参数名:
 
 ```
-
+只生成C文件
 ```
 
 原始简介:
@@ -2720,7 +2732,8 @@ off. Do not think you can use this directly.
 中文简介:
 
 ```
-
+只生成C源代码，不编译为二进制文件或者模块。这是用于调试和代码覆盖分析的，不会浪费CPU。默认关闭。
+不要认为你可以直接使用这个。
 ```
 
 ---
@@ -2742,7 +2755,7 @@ off. Do not think you can use this directly.
 中文参数名:
 
 ```
-
+强制使用clang
 ```
 
 原始简介:
@@ -2755,7 +2768,7 @@ version to piggy back on. Defaults to off.
 中文简介:
 
 ```
-
+强制使用 clang 编译。在 Windows 系统上，这需要一个正常运行的 Visual Studio 版本来支持。默认关闭。
 ```
 
 ---
@@ -2771,7 +2784,7 @@ version to piggy back on. Defaults to off.
 中文参数名:
 
 ```
-
+强制使用mingw64
 ```
 
 原始简介:
@@ -2784,7 +2797,7 @@ Python is used.
 中文简介:
 
 ```
-
+强制在 Windows 上使用 MinGW64。默认为关闭，除非使用 MSYS2 和 MinGW Python。
 ```
 
 ---
@@ -2800,7 +2813,7 @@ Python is used.
 中文参数名:
 
 ```
-
+使用msvc=msvc版本
 ```
 
 原始简介:
@@ -2815,7 +2828,8 @@ installed, otherwise MinGW64 is used.
 中文简介:
 
 ```
-
+强制在Windows上使用特定的MSVC版本。允许的值有"14.3" (MSVC 2022)和其他MSVC版本号。
+使用 "list "以获得已安装编译器的列表，或使用 "latest"。默认在有的情况下使用最新的MSVC。否则使用MinGW64。
 ```
 
 ---
@@ -2831,7 +2845,7 @@ installed, otherwise MinGW64 is used.
 中文参数名:
 
 ```
-
+并行编译任务数=N
 ```
 
 原始简介:
@@ -2844,7 +2858,7 @@ CPU count.
 中文简介:
 
 ```
-
+指定允许使用的并行C编译器任务数。默认为系统CPU数。
 ```
 
 ---
@@ -2860,7 +2874,7 @@ CPU count.
 中文参数名:
 
 ```
-
+链接时间优化=选择
 ```
 
 原始简介:
@@ -2873,7 +2887,7 @@ and "auto" (when it's known to work). Defaults to "auto".
 中文简介:
 
 ```
-
+使用链接时间优化（MSVC、gcc、clang）允许的值有 "yes"（是）、"no"（否）和 "auto"（自动）(已知可用)。默认为 "auto"。
 ```
 
 ---
@@ -2889,7 +2903,7 @@ and "auto" (when it's known to work). Defaults to "auto".
 中文参数名:
 
 ```
-
+使用Python的静态链接库=选择
 ```
 
 原始简介:
@@ -2902,7 +2916,7 @@ Use static link library of Python. Allowed values are "yes", "no", and "auto"
 中文简介:
 
 ```
-
+使用Python的静态链接库。允许的值有 "yes"（是）、"no"（否）和 "auto"（自动）(已知可用)。默认为 "auto"。
 ```
 
 ---
