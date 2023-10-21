@@ -4191,7 +4191,7 @@ the option can be specified multiple times. Default empty.
 中文参数名:
 
 ```
-
+Linux图标=图标路径
 ```
 
 原始简介:
@@ -4204,7 +4204,7 @@ Defaults to Python icon if available.
 中文简介:
 
 ```
-
+为单文件二进制可执行文件添加图标。只能给出一次。如果可用，默认为Python图标。
 ```
 
 ---
