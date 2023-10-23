@@ -2938,7 +2938,7 @@ Use static link library of Python. Allowed values are "yes", "no", and "auto"
 中文参数名:
 
 ```
-
+禁用缓存=已禁用缓存
 ```
 
 原始简介:
@@ -2952,7 +2952,8 @@ or with comma separated values. Default none.
 中文简介:
 
 ```
-
+禁用选定的缓存，设置"all"则为所有缓存。当前允许的值有："all(全部)","ccache","bytecode(字节码","dll-dependencies(dll依赖项)"。
+可以多次给出或使用逗号分隔给定的值。默认为无。
 ```
 
 ---
@@ -2968,7 +2969,7 @@ or with comma separated values. Default none.
 中文参数名:
 
 ```
-
+清理缓存=要清理的缓存
 ```
 
 原始简介:
@@ -2982,7 +2983,9 @@ be given multiple times or with comma separated values. Default none.
 中文简介:
 
 ```
-
+在执行前清理给定缓存，设置"all"则为所有缓存。当前允许的值有：
+"all(全部)","ccache","bytecode(字节码)","dll-dependencies(dll依赖项)"。
+可以多次给出或使用逗号分隔给定的值。默认为无。
 ```
 
 ---
@@ -2998,7 +3001,7 @@ be given multiple times or with comma separated values. Default none.
 中文参数名:
 
 ```
-
+禁用字节码缓存
 ```
 
 原始简介:
@@ -3011,7 +3014,7 @@ library, that are included as bytecode. Same as --disable-cache=bytecode.
 中文简介:
 
 ```
-
+不要重复使用模块的依赖分析结果，尤其是来自标准库的模块，这些模块会被包含为字节码。与--disable-cache=bytecode效果相同。
 ```
 
 ---
@@ -3027,20 +3030,20 @@ library, that are included as bytecode. Same as --disable-cache=bytecode.
 中文参数名:
 
 ```
-
+禁用ccache
 ```
 
 原始简介:
 
 ```
 Do not attempt to use ccache (gcc, clang, etc.) or clcache (MSVC, clangcl).
-Same as --disable- cache=ccache.
+Same as --disable-cache=ccache.
 ```
 
 中文简介:
 
 ```
-
+不要尝试使用ccache(gcc,clang等)或clcache(MSVC,clangcl)。与--disable-cache=ccache效果相同。
 ```
 
 ---
@@ -3056,7 +3059,7 @@ Same as --disable- cache=ccache.
 中文参数名:
 
 ```
-
+禁用dll依赖项缓存
 ```
 
 原始简介:
@@ -3064,13 +3067,14 @@ Same as --disable- cache=ccache.
 ```
 Disable the dependency walker cache. Will result in much longer times to create
 the distribution folder, but might be used in case the cache is suspect to cause
-errors. Same as --disable-cache=dll- dependencies.
+errors. Same as --disable-cache=dll-dependencies.
 ```
 
 中文简介:
 
 ```
-
+禁用依赖项分析器缓存。这将导致创建分发文件夹的时间大大延长，但如果怀疑缓存会导致错误，则可以使用它。
+与--disable-cache=dll-dependencies效果相同。
 ```
 
 ---
@@ -3086,7 +3090,7 @@ errors. Same as --disable-cache=dll- dependencies.
 中文参数名:
 
 ```
-
+强制dll依赖项缓存更新
 ```
 
 原始简介:
@@ -3100,7 +3104,7 @@ suspect to cause errors or known to need an update.
 中文简介:
 
 ```
-
+用于更新依赖分析器缓存。这将导致创建分发文件夹的时间大大延长，但如果怀疑缓存会导致错误或缓存需要更新，则可以使用它。
 ```
 
 ---
