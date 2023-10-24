@@ -3126,7 +3126,7 @@ suspect to cause errors or known to need an update.
 中文参数名:
 
 ```
-
+配置文件引导优化
 ```
 
 原始简介:
@@ -3141,7 +3141,8 @@ of Nuitka yet. Defaults to off.
 中文简介:
 
 ```
-
+通过先进行分析，然后使用结果来反馈到C编译中，启用C级别的配置文件引导优化（PGO）。
+注意：这是实验性的，还不能与Nuitka的独立模式一起使用。默认关闭。
 ```
 
 ---
@@ -3157,7 +3158,7 @@ of Nuitka yet. Defaults to off.
 中文参数名:
 
 ```
-
+配置文件引导优化参数=配置文件引导优化参数
 ```
 
 原始简介:
@@ -3222,7 +3223,7 @@ program.
 中文参数名:
 
 ```
-
+报告=报告文件名
 ```
 
 原始简介:
@@ -3238,6 +3239,9 @@ off.
 中文简介:
 
 ```
+在XML输出文件中报告模块、数据文件、编译、插件等详细信息。这对于报告问题也非常有用。
+例如，这些报告可以用于使用’–create-environment-from-report’轻松重建环境，但报告包含大量信息。默认关闭。
+
 
 ```
 
@@ -3254,7 +3258,7 @@ off.
 中文参数名:
 
 ```
-
+报告差异
 ```
 
 原始简介:
@@ -3267,7 +3271,7 @@ from run to run. Default is off.
 中文简介:
 
 ```
-
+以可比较的方式报告数据，即没有随着运行而变化的时间或内存使用值。默认关闭。
 ```
 
 ---
@@ -3297,7 +3301,8 @@ provided=pipenv-lock-hash=64a5e4' to track some input values. Default is empty.
 中文简介:
 
 ```
-
+报告来自您的数据。这可以多次给出，并且可以是任何形式的"key=value"，其中key应该是一个标识符，
+例如使用"--report-user-provided=pipenv-lock-hash=64a5e4"来跟踪一些输入值。默认为空。
 ```
 
 ---
@@ -3313,7 +3318,7 @@ provided=pipenv-lock-hash=64a5e4' to track some input values. Default is empty.
 中文参数名:
 
 ```
-
+报告模板=报告描述
 ```
 
 原始简介:
@@ -3327,7 +3332,8 @@ what these are. Can be given multiple times. Default is empty.
 中文简介:
 
 ```
-
+通过模板报告。需要提供模板和输出文件名"template.rst.j2:output.rst"。对于内置模板，请查看用户手册。
+可以多次给出。默认为空。
 ```
 
 ---
@@ -3343,7 +3349,7 @@ what these are. Can be given multiple times. Default is empty.
 中文参数名:
 
 ```
-
+静默模式 
 ```
 
 原始简介:
@@ -3355,7 +3361,7 @@ Disable all information outputs, but show warnings. Defaults to off.
 中文简介:
 
 ```
-
+禁止所有信息输出，但显示警告。默认关闭。
 ```
 
 ---
@@ -4439,7 +4445,7 @@ not present.
 中文参数名:
 
 ```
-
+启用插件=插件名称
 ```
 
 原始简介:
@@ -4452,7 +4458,7 @@ list and exit. Default empty.
 中文简介:
 
 ```
-
+启用插件。必须为插件名称。使用'--plugin-list'查询完整列表并退出。默认为空。
 ```
 
 ---
@@ -4468,7 +4474,7 @@ list and exit. Default empty.
 中文参数名:
 
 ```
-
+禁用插件=插件名称
 ```
 
 原始简介:
@@ -4482,7 +4488,7 @@ empty.
 中文简介:
 
 ```
-
+禁用插件。必须为插件名称。使用'--plugin-list'查询完整列表并退出。大多数情况下禁用标准插件并不是一个好主意。默认为空。
 ```
 
 ---
