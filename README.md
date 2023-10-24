@@ -26,7 +26,6 @@
 <details>
 <summary>翻译</summary>
 
-* [Nuitka中文文档翻译](./docs/translation/Nuitka_Chinese_docs_translation/README.md)
 
 </details>
 
