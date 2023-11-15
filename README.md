@@ -21,6 +21,15 @@
 
 </details>
 
+
+<details>
+<summary>脚本</summary>
+
+* Github Actions
+    * [Vue+Vite项目发布到github pages](./web/scripts/github_actions/vite+vue_githubPages/README.md)
+
+</details>
+
 ### 文档相关
 
 <details>
