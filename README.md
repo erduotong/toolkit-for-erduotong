@@ -27,6 +27,7 @@
 
 * Github Actions
     * [Vue+Vite项目发布到github pages](./web/scripts/github_actions/vite+vue_githubPages/README.md)
+* [favicon 单文件打包后Vite处理插件](./web/scripts/inline_favicon/readme.md)
 
 </details>
 
