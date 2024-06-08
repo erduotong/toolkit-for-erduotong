@@ -21,21 +21,18 @@
 
 </details>
 
-
-<details>
-<summary>脚本</summary>
+### 脚本
 
 * Github Actions
     * [Vue+Vite项目发布到github pages](./web/scripts/github_actions/vite+vue_githubPages/README.md)
 * [favicon 单文件打包后Vite处理插件](./web/scripts/inline_favicon/readme.md)
-
-</details>
+* powershell (.ps1)
+    * [服务器启动脚本](./web/scripts/powershell/server_launcher/readme.md)
 
 ### 文档相关
 
 <details>
 <summary>翻译</summary>
-
 
 </details>
 
