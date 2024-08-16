@@ -36,6 +36,9 @@
 
 </details>
 
+### Obsidian相关
+
+- [天气模块](./obsidian/weatherModule/readme.md)
 ## 分享协议
 
 如无特殊说明，本仓库内的所有内容均遵循[MIT](./LICENSE)协议
