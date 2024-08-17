@@ -14,12 +14,10 @@
 
 ### Web相关
 
-<details>
-<summary>模板</summary>
+
 
 * [原生JS网页模板(带翻译和主题设置)](./web/template/native_JS_web_templates_(with_i18n_and_theme_settings)/README.md)
 
-</details>
 
 ### 脚本
 
@@ -29,16 +27,11 @@
 * powershell (.ps1)
     * [服务器启动脚本](./web/scripts/powershell/server_launcher/readme.md)
 
-### 文档相关
-
-<details>
-<summary>翻译</summary>
-
-</details>
 
 ### Obsidian相关
 
 - [天气模块](./obsidian/weatherModule/readme.md)
+- [天气系统模板](./obsidian/WeatherTemplate/README.md)
 ## 分享协议
 
 如无特殊说明，本仓库内的所有内容均遵循[MIT](./LICENSE)协议

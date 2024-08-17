@@ -1,0 +1,177 @@
+{
+  "main": {
+    "id": "559d41b147685d90",
+    "type": "split",
+    "children": [
+      {
+        "id": "d302784d6a063c04",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "27fb8a212e66ca98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2493b32bc79507c3",
+    "type": "split",
+    "children": [
+      {
+        "id": "622d1ed4156ce761",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d647e70f907ad40f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3eb8a85d00f29547",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "86a668a4ab75e31d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "796e2a99a328bc33",
+    "type": "split",
+    "children": [
+      {
+        "id": "e6595f41341535e8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fe85205c325298a6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c8d08b71b8426e1c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "69d195dfc03a29c7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "dcbd3710fde43834",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "27fb8a212e66ca98",
+  "lastOpenFiles": [
+    "/scripts/scriptsData/weatherData.json",
+    "/scripts/scriptsData",
+    "/scripts",
+    "imgs/Pasted image 20240817143043.png",
+    "README.md",
+    "imgs/Pasted image 20240817144014.png",
+    "imgs/Pasted image 20240817143843.png",
+    "imgs/Pasted image 20240817143708.png",
+    "imgs/Pasted image 20240817142829.png",
+    "imgs/Pasted image 20240817142757.png",
+    "imgs/Pasted image 20240817141902.png",
+    "imgs/Pasted image 20240817141842.png",
+    "Pasted image 20240817141826.png",
+    "scripts/scriptsData/weatherData.json",
+    "/scripts/scriptsData/",
+    "/scripts/data/",
+    "/scripts/data",
+    "日记/2024-08-17.md",
+    "imgs/Pasted image 20240817141143.png",
+    "imgs",
+    "日记/未命名.md",
+    "模板/日记模板.md",
+    "scripts/templater/getDailyWeather.js",
+    "scripts/modules/weather.js"
+  ]
+}
